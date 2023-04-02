@@ -73,7 +73,7 @@ function drawMyFace(){
 }
 
 function setMyFaceScore(){
-  const score = 0; /*getFTScore();*/
+  const score = getFTScore();
   scoreEl.innerText = Math.round(score);
 }
 
@@ -89,6 +89,7 @@ function drawMyFaceDots(positions){
     drawCircle(posX,posY,'#0000FF');
     if(debugMode){
         // write the dot label on the screen with drawText
+        drawText(i,posX,posY);
     }
   }
 }
