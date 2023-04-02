@@ -14,7 +14,7 @@ function startMyVideo() {
     showElement("stopVideo");
     showElement("debug");
     // Call helper library to start webcam
-    //startVideo();
+    startVideo();
 }
 
 function stopMyVideo() {
@@ -23,7 +23,7 @@ function stopMyVideo() {
     hideElement("stopVideo");
     hideElement("debug");
     // Call helper library to stop webcam
-    //stopVideo();
+    stopVideo();
     mockMode = false;
 }
 registerVideoPlay(playMyVideo);
