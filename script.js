@@ -99,9 +99,25 @@ function drawMyFaceDots(positions){
  * @param positions - array of face positions
  */
 function drawMyFaceLine(positions){
-  const dots = getFTModelDotConnections()
+  // for(let i =0;i<positions.length-1;i++){
+  //   const x1=positions[i][0];
+  //   const y1=positions[i][1];
+  //   const x2=positions[i+1][0];
+  //   const y2=positions[i+1][1];
+  //   drawLine(x1,y1,x2,y2,'green');
+  // }
+
+  const dots = getFTModelDotConnections();
   while(dots.length>0){
-    const dotPosition = dots.pop();
+    const myDot = dots.pop();
+    const myDotStart = myDot[0];
+    const myDotEnd = myDot[1];
+
+    const x1=positions[myDotStart][0];
+    const y1=positions[myDotStart][1];
+    const x2=positions[myDotEnd][0];
+    const y2=positions[myDotEnd][1];
+    drawLine(x1,y1,x2,y2,'green');
     // connect the dots positions with drawLine
   }
 }
